@@ -1,5 +1,11 @@
-import React from 'react';
+import React , {Component} from 'react';
 import { StyleSheet, Text, View, Button, Image, StatusBar, TextInput } from 'react-native';
+
+const NewComponent = function() {
+  return (
+    <Text>New Component</Text>
+  )
+}
 
 export default class App extends React.Component {
   constructor() {
@@ -52,6 +58,7 @@ export default class App extends React.Component {
           <View style={styles.icRow}>
             <View style={styles.ic2}>
               <Text style={{fontWeight: 'bold'}}>TWO</Text>
+              <NewComponent />
             </View>
             <View style={styles.ic3}>
               <Text style={{fontWeight: 'bold'}}>THREE</Text>
