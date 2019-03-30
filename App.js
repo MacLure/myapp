@@ -11,6 +11,7 @@ export default class App extends React.Component {
         <Text style={styles.myText}>Open up App.js to start working on your app!</Text>
         <Text style={{fontSize: 20 }}>More Text</Text>
         <Image style ={{width: 200, height: 200}} source={require('./assets/favicon.jpg')} />
+        <Image style={{width: 200, height: 200}}source={{uri: 'https://picsum.photos/200/200'}}/>
         <Button
           title="title"
           color="#bada55"
