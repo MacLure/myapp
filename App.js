@@ -14,11 +14,13 @@ export default class App extends React.Component {
           <View style={styles.ic1}>
             <Text style={{fontWeight: 'bold'}}>ONE</Text>
           </View>
-          <View style={styles.ic2}>
-            <Text style={{fontWeight: 'bold'}}>TWO</Text>
-          </View>
-          <View style={styles.ic3}>
-            <Text style={{fontWeight: 'bold'}}>THREE</Text>
+          <View style={styles.icRow}>
+            <View style={styles.ic2}>
+              <Text style={{fontWeight: 'bold'}}>TWO</Text>
+            </View>
+            <View style={styles.ic3}>
+              <Text style={{fontWeight: 'bold'}}>THREE</Text>
+            </View>
           </View>
           <View style={styles.ic4}>
             <Text style={{fontWeight: 'bold'}}>FOUR</Text>
@@ -51,27 +53,30 @@ const styles = StyleSheet.create({
   },
   flexContainer: {
     flex: 1,
-    flexDirection:'row',
+    flexDirection:'column',
 
   },
   ic1: {
     backgroundColor: '#c3f',
-    height: 100,
-    width: 100
+    flex: 1
+  },
+  icRow: {
+    flex: 1,
+    flexDirection: 'row',
   },
   ic2: {
     backgroundColor: '#3cf',
-    height: 100,
-    width: 100
+    flex: 1
+
   },
   ic3: {
     backgroundColor: '#fc3',
-    height: 100,
-    width: 100
+    flex: 1
+
   },
   ic4: {
     backgroundColor: '#f3c',
-    height: 100,
-    width: 100
+    flex: 1
+
   }
 });
