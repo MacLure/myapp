@@ -25,7 +25,7 @@ export default class App extends React.Component {
 
   pickNum = (e) => {
     let num = Math.floor(Math.random() * this.state.max)
-    
+    this.setState({num})
   }
 
   pressed = (e) => {
@@ -84,8 +84,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+input: {
+  fontSize: 30,
+  color: "white",
+},
+
   myText: {
   },
+
   flexContainer: {
     flex: 1,
     flexDirection:'column',
