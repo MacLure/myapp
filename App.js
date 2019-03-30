@@ -11,9 +11,22 @@ export default class App extends React.Component {
     }
   }
 
-  changeNum = (txt) => {}
+  changeNum = (txt) => {
+    let max = parseInt(txt)
+    let ready = false
+    if (!isNaN(max) && max > 0) {
+      ready = !ready
+      this.setState({max, ready})
+    } else {
+      this.setState({ready, max: 0})
+    }
+    
+  }
 
-  pickNum = (e) => {}
+  pickNum = (e) => {
+    let num = Math.floor(Math.random() * this.state.max)
+    
+  }
 
   pressed = (e) => {
     console.log('pressed')
