@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Image } from 'react-native';
 
 export default class App extends React.Component {
   pressed = (e) => {
@@ -10,6 +10,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text style={styles.myText}>Open up App.js to start working on your app!</Text>
         <Text style={{fontSize: 20 }}>More Text</Text>
+        <Image style ={{width: 200, height: 200}} source={require('./assets/favicon.jpg')} />
         <Button
           title="title"
           color="#bada55"
