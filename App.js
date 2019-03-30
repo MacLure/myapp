@@ -9,7 +9,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.myText}>Open up App.js to start working on your app!</Text>
-        <Text>More Text</Text>
+        <Text style={{fontSize: 20 }}>More Text</Text>
         <Button
           title="title"
           color="#bada55"
@@ -27,4 +27,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  myText: {
+
+  }
 });
