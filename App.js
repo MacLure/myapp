@@ -3,12 +3,13 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default class App extends React.Component {
   pressed = (e) => {
-    console.log('pressed]')
+    console.log('pressed')
   }
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Text style={styles.myText}>Open up App.js to start working on your app!</Text>
+        <Text>More Text</Text>
         <Button
           title="title"
           color="#bada55"
