@@ -1,7 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, StatusBar, TextInput } from 'react-native';
 
 export default class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      num: 0,
+      max: 0,
+      ready: false
+    }
+  }
+
+  changeNum = (txt) => {}
+
+  pickNum = (e) => {}
+
   pressed = (e) => {
     console.log('pressed')
   }
@@ -13,6 +26,15 @@ export default class App extends React.Component {
         <View style={styles.flexContainer}>
           <View style={styles.ic1}>
             <Text style={{fontWeight: 'bold'}}>ONE</Text>
+            <TextInput 
+              defaultValue={this.state.max.toString(10)}
+              keyboardType="number-pad"
+              maxLength={3}
+              onChangeText={this.changeNum}
+              style={styles.input}
+            />
+            <Text style={styles.label}>{this.state.num}</Text>
+            {this.state.ready && (<Button title="Pick Number" color="orange" onPress={this.pickNum}/>)}
           </View>
           <View style={styles.icRow}>
             <View style={styles.ic2}>
